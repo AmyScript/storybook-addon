@@ -1,4 +1,10 @@
 import React from "react";
+import { styled } from "@storybook/theming";
+import {  Button } from "@storybook/components";
+
+export const RequestDataButton = styled(Button)({
+  marginTop: "1rem",
+});
 
 
 
