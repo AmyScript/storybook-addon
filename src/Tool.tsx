@@ -18,7 +18,7 @@ export const Tool = () => {
     <IconButton
       key={TOOL_ID}
       active={myAddon}
-      title="Enable CSS logging"
+      title="Enable Display Element CSS"
       onClick={toggleMyTool}
     >
       <Icons icon="eye" />

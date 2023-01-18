@@ -15,15 +15,12 @@ interface PanelContentProps {
   style: Array<string>,
 }
 
-export const PanelContent: React.FC<PanelContentProps> = ({ style
-
-}) => (
-
-  <div>
+export const PanelContent: React.FC<PanelContentProps> = ({ style}) => (
+  <React.Fragment>
     {style.map((value, i) => {
       return (
         <CssDisplay key={i}>{value}</CssDisplay>
       )
     })}
-  </div>
+  </React.Fragment>
 );
