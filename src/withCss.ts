@@ -8,9 +8,9 @@ export const withCss: DecoratorFunction = (StoryFn, context) => {
   const [{ myAddon }] = useGlobals();
 
   useEffect(() => {
-    if(myAddon){
     const channel = addons.getChannel();
     channel.emit(EVENTS.CLEAR);
+    if(myAddon){
     document.querySelector('#root').addEventListener('click', getCss);
     return () => document.querySelector('#root').removeEventListener('click', getCss);
     }
