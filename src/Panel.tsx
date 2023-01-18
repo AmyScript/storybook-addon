@@ -19,6 +19,7 @@ export const Panel: React.FC<PanelProps> = (props) => {
   const [state, setState] = useAddonState<State>(ADDON_ID);
   useChannel({
     [EVENTS.RESULT]: (result) => setState(result),
+    [EVENTS.CLEAR]: () => setState(undefined),
   });
   return (
     <AddonPanel {...props}>

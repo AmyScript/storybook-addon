@@ -1,10 +1,14 @@
 import type { DecoratorFunction } from "@storybook/addons";
+import { addons } from "@storybook/addons";
 import { useEffect } from "@storybook/addons";
 import { getCss } from "./getCss";
+import { EVENTS } from "./constants";
 
 export const withCss: DecoratorFunction = (StoryFn, context) => {
 
   useEffect(() => {
+    const channel = addons.getChannel();
+    channel.emit(EVENTS.CLEAR);
     document.querySelector('#root').addEventListener('click', getCss);
     return () => document.querySelector('#root').removeEventListener('click', getCss);
   }, [context.id]);
