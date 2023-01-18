@@ -44,10 +44,14 @@ const findCss = (selector: string): string => {
         for (const rulesIndex in cssRules) {
             let cssRule = cssRules[rulesIndex] as CSSStyleRule;
             if(cssRule.selectorText === selector) {
-                const cssText: string = cssRule.cssText;
+                const cssText: string = addNewLines(cssRule.cssText);
                 return cssText;
             }
         }
     }
     return null;
+}
+
+const addNewLines = (text: string) => {
+    return text.replaceAll(';', ';\n').replaceAll('{', '{\n');
 }

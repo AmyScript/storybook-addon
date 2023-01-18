@@ -1,28 +1,28 @@
 import React from "react";
-import { useAddonState, useChannel } from "@storybook/api";
 import { AddonPanel } from "@storybook/components";
-import { ADDON_ID, EVENTS } from "./constants";
+import { useAddonState } from '@storybook/api';
 import { PanelContent } from "./components/PanelContent";
+import { useChannel } from '@storybook/api';
+import { EVENTS, ADDON_ID } from "./constants";
 
 interface PanelProps {
   active: boolean;
 }
+interface State {
+  styles: Array<string>;
+  classNames: Array<string>;
+  elementId: string;
+  elementType: string;
+}
 
 export const Panel: React.FC<PanelProps> = (props) => {
-  // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
-  const [results, setState] = useAddonState(ADDON_ID, {
-    danger: [],
-    warning: [],
+  const [state, setState] = useAddonState<State>(ADDON_ID);
+  useChannel({
+    [EVENTS.RESULT]: (result) => setState(result),
   });
-
-  // https://storybook.js.org/docs/react/addons/addons-api#usechannel
-  const emit = useChannel({
-    [EVENTS.RESULT]: (newResults) => setState(newResults),
-  });
-
   return (
     <AddonPanel {...props}>
-      <PanelContent/>
+      <PanelContent style={state && state.styles ? state.styles : []} />
     </AddonPanel>
   );
 };

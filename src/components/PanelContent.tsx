@@ -1,23 +1,29 @@
 import React from "react";
 import { styled } from "@storybook/theming";
-import {  Button } from "@storybook/components";
+import {  Button, Div } from "@storybook/components";
 
 export const RequestDataButton = styled(Button)({
   marginTop: "1rem",
 });
 
-
+const CssDisplay = styled(Div)({
+  whiteSpace: "pre-line",
+  padding: "10px",
+});
 
 interface PanelContentProps {
-
+  style: Array<string>,
 }
 
-/**
- * Checkout https://github.com/storybookjs/storybook/blob/next/code/addons/jest/src/components/Panel.tsx
- * for a real world example
- */
-export const PanelContent: React.FC<PanelContentProps> = ({
+export const PanelContent: React.FC<PanelContentProps> = ({ style
 
 }) => (
-  <div>Text</div>
+
+  <div>
+    {style.map((value, i) => {
+      return (
+        <CssDisplay key={i}>{value}</CssDisplay>
+      )
+    })}
+  </div>
 );
