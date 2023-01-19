@@ -1,5 +1,10 @@
-# Storybook Addon Styles On Hover
-Hover over any storybook element to see the element's CSS style
+# Storybook Addon - Display Element CSS
+
+To enable the Display Element CSS addon, click on the eye icon on the toolbar.
+
+Once enabled, click on any storybook element to see the element's type selector, class selector, and ID selector CSS styles.
+
+To go back to seeing the story element's default click behavior, disable the Display Element CSS addon by clicking on the eye icon on the toolbar.
 
 ### Development scripts
 
