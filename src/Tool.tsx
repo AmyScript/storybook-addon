@@ -18,10 +18,10 @@ export const Tool = () => {
     <IconButton
       key={TOOL_ID}
       active={myAddon}
-      title="Enable my addon"
+      title="Enable Display Element CSS"
       onClick={toggleMyTool}
     >
-      <Icons icon="lightning" />
+      <Icons icon="eye" />
     </IconButton>
   );
 };

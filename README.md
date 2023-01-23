@@ -1,31 +1,10 @@
-<!-- README START -->
+# Storybook Addon - Display Element CSS
 
-# Storybook Addon Kit
+To enable the Display Element CSS addon, click on the eye icon on the toolbar.
 
-Simplify the creation of Storybook addons
+Once enabled, click on any storybook element to see the element's type selector, class selector, and ID selector CSS styles.
 
-- 📝 Live-editing in development
-- ⚛️ React/JSX support
-- 📦 Transpiling and bundling with Babel
-- 🏷 Plugin metadata
-- 🚢 Release management with [Auto](https://github.com/intuit/auto)
-- 🧺 Boilerplate and sample code
-- 🛄 ESM support
-- 🛂 TypeScript by default with option to eject to JS
-
-## Getting Started
-
-Click the **Use this template** button to get started.
-
-![](https://user-images.githubusercontent.com/321738/125058439-8d9ef880-e0aa-11eb-9211-e6d7be812959.gif)
-
-Clone your repository and install dependencies.
-
-```sh
-yarn
-```
-
-<!-- README END -->
+To go back to seeing the story element's default click behavior, disable the Display Element CSS addon by clicking on the eye icon on the toolbar.
 
 ### Development scripts
 
