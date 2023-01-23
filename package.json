@@ -1,9 +1,11 @@
 {
   "name": "display-element-css",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "description": "Click on any storybook element to see the element's type selector, class selector, and ID selector CSS styles",
   "keywords": [
-    "css", "style", "storybook-addons"
+    "css",
+    "style",
+    "storybook-addons"
   ],
   "repository": {
     "type": "git",
