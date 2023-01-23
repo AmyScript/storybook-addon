@@ -1,6 +1,6 @@
 {
   "name": "display-element-css",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Click on any storybook element to see the element's type selector, class selector, and ID selector CSS styles",
   "keywords": [
     "css",
