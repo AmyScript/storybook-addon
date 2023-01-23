@@ -8,22 +8,23 @@
  *
  * https://storybook.js.org/docs/react/writing-stories/decorators#gatsby-focus-wrapper
  */
-import { withCss } from "../withCss";
+import { withCss } from '../withCss';
 
 export const decorators = [withCss];
 
 export const globalTypes = {
+  myAddon: false,
   theme: {
-    name: "Theme",
-    description: "Global theme for components",
+    name: 'Theme',
+    description: 'Global theme for components',
     toolbar: {
-      icon: "circlehollow",
-      title: "Theme",
+      icon: 'circlehollow',
+      title: 'Theme',
       items: [
-        { value: "light", icon: "circlehollow", title: "light" },
-        { value: "dark", icon: "circle", title: "dark" },
-        { value: "side-by-side", icon: "sidebar", title: "side by side" },
-        { value: "stacked", icon: "bottombar", title: "stacked" },
+        { value: 'light', icon: 'circlehollow', title: 'light' },
+        { value: 'dark', icon: 'circle', title: 'dark' },
+        { value: 'side-by-side', icon: 'sidebar', title: 'side by side' },
+        { value: 'stacked', icon: 'bottombar', title: 'stacked' },
       ],
     },
   },
